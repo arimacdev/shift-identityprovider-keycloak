@@ -34,7 +34,18 @@
 <body class="${properties.kcBodyClass!}">
   <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
-      <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
+  
+  
+   <div style="margin-bottom: -60px; margin-top: 60px">
+    <img width="200px" id="kc-image" src="${url.resourcesPath}/img/logo.png">
+<br />
+     <span style="font-weight: bold; font-size: 14px; color: #0C0C5A">Welcome to Arimac PM tool</span>
+     <br />
+     <div style="margin-top: 10px; font-size: 12px; color: #576377">Enter your email address and password to get <br /> access your account</div>
+     </div>
+  
+  
+  
     </div>
     <div class="${properties.kcFormCardClass!} <#if displayWide>${properties.kcFormCardAccountClass!}</#if>">
       <header class="${properties.kcFormHeaderClass!}">

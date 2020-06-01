@@ -5,7 +5,7 @@ variables:
 stages:
   - build
 
-docker-build:
+docker-build-dev:
   image: docker:latest
   services:
     - docker:dind
@@ -20,3 +20,17 @@ docker-build:
   - docker push $CONTAINER_IMAGE:v${CI_PIPELINE_IID}
   only:
   - dev
+
+docker-build-release:
+  image: docker:latest
+  services:
+    - docker:dind
+  stage: build
+  script:
+  - echo "CI_PIPELINE_ID=${CI_PIPELINE_ID} CI_JOB_ID=${CI_JOB_ID}"
+  - docker build -t $CONTAINER_IMAGE:release .
+  - echo "$GCP_CI_KEY" > key.json
+  - docker login -u _json_key --password-stdin https://asia.gcr.io < key.json
+  - docker push $CONTAINER_IMAGE:release
+  only:
+  - release

@@ -36,8 +36,8 @@
     <div id="kc-header" class="${properties.kcHeaderClass!}">
   
   
-   <div style="margin-bottom: -60px; margin-top: 60px">
-    <img width="200px" id="kc-image" src="${url.resourcesPath}/img/logo.png">
+   <div  style="margin-bottom: -60px; margin-top: 60px; text-align: center">
+    <img width="150px" align="center" id="kc-image" src="${url.resourcesPath}/img/logo.png">
 <br />
      <span style="font-weight: bold; font-size: 14px; color: #0C0C5A">Welcome to Arimac PM tool</span>
      <br />

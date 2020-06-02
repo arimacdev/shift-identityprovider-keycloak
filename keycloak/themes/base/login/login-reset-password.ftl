@@ -1,4 +1,4 @@
-<#import "template.ftl" as layout>
+<#import "templateChild.ftl" as layout>
 <@layout.registrationLayout displayInfo=true; section>
     <#if section = "header">
         ${msg("emailForgotTitle")}
@@ -6,10 +6,9 @@
         <form id="kc-reset-password-form" class="${properties.kcFormClass!}" action="${url.loginAction}" method="post">
             <div class="${properties.kcFormGroupClass!}">
                 <div class="${properties.kcLabelWrapperClass!}">
-                    <label for="username" class="${properties.kcLabelClass!}"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
                 </div>
                 <div class="${properties.kcInputWrapperClass!}">
-                    <input type="text" id="username" name="username" class="${properties.kcInputClass!}" autofocus/>
+                    <input id="kc-text-box" placeholder="Username or email" type="text" id="username" name="username" class="${properties.kcInputClass!}" autofocus/>
                 </div>
             </div>
 
@@ -20,9 +19,8 @@
                     </div>
                 </div>
 
-                <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
-                    <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}"/>
-                </div>
+                    <input id="kc-form-buttons" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}"/>
+                
             </div>
         </form>
     <#elseif section = "info" >

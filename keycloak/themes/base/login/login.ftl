@@ -9,7 +9,7 @@
                 <div class="${properties.kcFormGroupClass!}">
                    
                     <#if usernameEditDisabled??>
-                        <inputplaceholder="Username or Email" id="kc-text-box" tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" disabled />
+                        <input placeholder="Username or Email" id="kc-text-box" tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" disabled />
                     <#else>
                         <input placeholder="Username or Email" id="kc-text-box" tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autofocus autocomplete="off" />
                     </#if>

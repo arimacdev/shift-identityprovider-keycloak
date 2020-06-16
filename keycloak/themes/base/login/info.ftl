@@ -1,4 +1,4 @@
-<#import "template.ftl" as layout>
+<#import "templateChild.ftl" as layout>
 <@layout.registrationLayout displayMessage=false; section>
     <#if section = "header">
         <#if messageHeader??>

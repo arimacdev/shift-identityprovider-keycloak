@@ -12,6 +12,7 @@
   padding-left: 20px;
   border-radius: 5px;
 }
+
 #kc-text-box:focus {
   outline: none !important;
 }
@@ -223,7 +224,6 @@ ul#kc-totp-supported-apps {
 }
 
 /* Social */
-
 #kc-social-providers ul {
   padding: 0;
 }
@@ -446,7 +446,10 @@ a.zocial {
   margin-bottom: 25px;
 }
 .login-pf-page .login-pf-social-link a {
-  padding: 2px 0;
+  /* padding: 2px 0; */
+  background-color: #4285f4 !important;
+  border-radius: 5px !important;
+  color: #ffffff !important;
 }
 
 .login-pf-page.login-pf-page-accounts {

@@ -1,4 +1,4 @@
-<#import "template.ftl" as layout>
+<#import "templateChild.ftl" as layout>
 <@layout.registrationLayout; section>
     <#if section = "header">
         ${msg("loginProfileTitle")}
@@ -47,9 +47,8 @@
                     </div>
                 </div>
 
-                <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
-                    <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}" />
-                </div>
+                    <input id="kc-form-buttons" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}" />
+               
             </div>
         </form>
     </#if>
